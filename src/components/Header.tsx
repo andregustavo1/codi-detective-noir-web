@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Skull } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,24 +27,27 @@ const Header = () => {
     >
       <div className="detective-container flex justify-between items-center">
         <a href="#" className="flex items-center space-x-2">
-          <Skull className="h-8 w-8 text-detective-red" />
-          <span className="text-white font-special-elite text-xl md:text-2xl">CODI BRASIL</span>
+          <img 
+            src="/lovable-uploads/5f769981-4a20-476d-a28d-c90d75081e25.png" 
+            alt="CODI Brasil Logo" 
+            className="h-10 w-auto"
+          />
         </a>
         
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-6">
+        <nav className="hidden md:flex space-x-4">
           {['Início', 'Sobre o Curso', 'Metodologia', 'Diferenciais', 'Depoimentos', 'Investimento', 'Contato'].map((item) => (
             <a 
               key={item} 
               href={`#${item.toLowerCase().replace(/ /g, '-')}`}
-              className="text-white hover:text-detective-red transition-colors text-sm uppercase tracking-wider"
+              className="text-white hover:text-detective-red transition-colors text-xs uppercase tracking-wider"
             >
               {item}
             </a>
           ))}
         </nav>
 
-        <a href="#inscreva-se" className="hidden md:block detective-button">
+        <a href="#inscreva-se" className="hidden md:block detective-button text-sm py-2 px-4">
           Inscreva-se Agora
         </a>
         
@@ -66,7 +69,7 @@ const Header = () => {
                 <a 
                   key={item} 
                   href={`#${item.toLowerCase().replace(/ /g, '-')}`}
-                  className="text-white hover:text-detective-red transition-colors text-sm uppercase tracking-wider py-2 border-b border-detective-mediumgray"
+                  className="text-white hover:text-detective-red transition-colors text-xs uppercase tracking-wider py-2 border-b border-detective-mediumgray"
                   style={{ animationDelay: `${index * 0.1}s` }}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -75,7 +78,7 @@ const Header = () => {
               ))}
               <a 
                 href="#inscreva-se" 
-                className="detective-button w-full text-center mt-4"
+                className="detective-button w-full text-center mt-4 text-sm py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Inscreva-se Agora
