@@ -21,12 +21,12 @@ const Hero = () => {
       
       {/* Background image: updated to skull mask image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ 
-          backgroundImage: "url('/lovable-uploads/97255ce7-2a7d-4192-b90b-b2db931d9eba.png')",
-          filter: 'grayscale(70%) brightness(0.44)',
-        }}
-      ></div>
+  className="absolute inset-0 bg-cover bg-top top-[-200px]" // Alterado de bg-center para bg-top
+  style={{ 
+    backgroundImage: "url('/lovable-uploads/1.jpg')",
+    filter: 'grayscale(70%) brightness(0.44)',
+  }}
+></div>
       
       {/* Noise/darkness texture */}
       <div className="absolute inset-0 bg-detective-black opacity-50 mix-blend-multiply"></div>
@@ -37,7 +37,7 @@ const Hero = () => {
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
             <div className="w-20 h-20 mx-auto mb-6 relative">
               <img 
-                src="/lovable-uploads/cd50d9e9-5513-44e2-8ce2-3805d07a9a0e.png" 
+                src="/lovable-uploads/1bd30a81-d2c0-4644-9faa-cfcd8b8240a9.png" 
                 alt="CODI Brasil Logo" 
                 className="w-full h-full object-contain"
               />

@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-detective-black/90 backdrop-blur-sm shadow-md py-3' : 'bg-transparent py-5'
+        scrolled ? 'bg-black shadow-md py-3' : 'bg-transparent py-5'
       }`}
     >
       <div className="detective-container flex justify-between items-center">
@@ -32,7 +32,7 @@ const Header = () => {
           <img 
             src="/lovable-uploads/1bd30a81-d2c0-4644-9faa-cfcd8b8240a9.png" 
             alt="CODI Brasil Logo" 
-            className="h-12 w-12 rounded-full"
+            className="h-16 w-auto rounded-full"
           />
         </a>
         
