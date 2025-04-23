@@ -17,15 +17,18 @@ const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
       {/* Background overlay */}
-      <div className="absolute inset-0 bg-detective-black opacity-80 z-0"></div>
+      <div className="absolute inset-0 bg-detective-black opacity-85 z-0"></div>
       
-      {/* Background image */}
+      {/* Background image: updated to skull mask image */}
       <div 
-        className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1494891848038-7bd202a2afeb?q=80&w=2000')] bg-cover bg-center"
-        style={{ filter: 'grayscale(100%) brightness(0.3)' }}
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ 
+          backgroundImage: "url('/lovable-uploads/97255ce7-2a7d-4192-b90b-b2db931d9eba.png')",
+          filter: 'grayscale(70%) brightness(0.44)',
+        }}
       ></div>
       
-      {/* Noise texture */}
+      {/* Noise/darkness texture */}
       <div className="absolute inset-0 bg-detective-black opacity-50 mix-blend-multiply"></div>
 
       {/* Content */}
@@ -88,3 +91,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
