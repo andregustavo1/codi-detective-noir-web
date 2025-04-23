@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom colors for detective theme
+				detective: {
+					black: '#0D0D0D',
+					darkgray: '#1E1E1E',
+					mediumgray: '#333333',
+					lightgray: '#666666',
+					red: '#990000',
 				}
 			},
 			borderRadius: {
@@ -84,11 +93,51 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'slide-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateX(-20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateX(0)'
+					}
+				},
+				'typewriter': {
+					'0%': { width: '0%' },
+					'100%': { width: '100%' }
+				},
+				'blink': {
+					'50%': { borderColor: 'transparent' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out forwards',
+				'slide-in': 'slide-in 0.5s ease-out forwards',
+				'typewriter': 'typewriter 2s steps(40) forwards',
+				'blink': 'blink 0.7s infinite'
+			},
+			backgroundImage: {
+				'noir-texture': "url('/public/lovable-uploads/cd50d9e9-5513-44e2-8ce2-3805d07a9a0e.png')",
+				'dark-paper': "url('https://images.unsplash.com/photo-1593005510329-8a4035a7238f?q=80&w=1920')"
+			},
+			fontFamily: {
+				'special-elite': ['"Special Elite"', 'cursive'],
+				'courier-prime': ['"Courier Prime"', 'monospace'],
+				'montserrat': ['Montserrat', 'sans-serif']
 			}
 		}
 	},
