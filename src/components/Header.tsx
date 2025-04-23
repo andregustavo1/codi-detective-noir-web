@@ -19,6 +19,8 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const navItems = ['Início', 'Sobre', 'Metodologia', 'Diferenciais', 'Contato'];
+
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -28,15 +30,15 @@ const Header = () => {
       <div className="detective-container flex justify-between items-center">
         <a href="#" className="flex items-center space-x-2">
           <img 
-            src="/lovable-uploads/5f769981-4a20-476d-a28d-c90d75081e25.png" 
+            src="/lovable-uploads/1bd30a81-d2c0-4644-9faa-cfcd8b8240a9.png" 
             alt="CODI Brasil Logo" 
-            className="h-10 w-auto"
+            className="h-12 w-12 rounded-full"
           />
         </a>
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-4">
-          {['Início', 'Sobre o Curso', 'Metodologia', 'Diferenciais', 'Depoimentos', 'Investimento', 'Contato'].map((item) => (
+          {navItems.map((item) => (
             <a 
               key={item} 
               href={`#${item.toLowerCase().replace(/ /g, '-')}`}
@@ -48,7 +50,7 @@ const Header = () => {
         </nav>
 
         <a href="#inscreva-se" className="hidden md:block detective-button text-sm py-2 px-4">
-          Inscreva-se Agora
+          Inscreva-se
         </a>
         
         {/* Mobile Menu Button */}
@@ -65,7 +67,7 @@ const Header = () => {
         <div className="md:hidden bg-detective-black/95 backdrop-blur-md border-t border-detective-mediumgray animate-fade-in">
           <div className="detective-container py-4">
             <nav className="flex flex-col space-y-4">
-              {['Início', 'Sobre o Curso', 'Metodologia', 'Diferenciais', 'Depoimentos', 'Investimento', 'Contato'].map((item, index) => (
+              {navItems.map((item, index) => (
                 <a 
                   key={item} 
                   href={`#${item.toLowerCase().replace(/ /g, '-')}`}
@@ -81,7 +83,7 @@ const Header = () => {
                 className="detective-button w-full text-center mt-4 text-sm py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Inscreva-se Agora
+                Inscreva-se
               </a>
             </nav>
           </div>
