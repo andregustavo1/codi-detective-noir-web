@@ -1,5 +1,5 @@
 import React from 'react';
-import { FileSearch, Shield, Camera, CheckCircle2, DollarSign, Award, GraduationCap, Briefcase, BadgeCheck, ScrollText } from 'lucide-react';
+import { FileSearch, Shield, Camera, CheckCircle2, DollarSign, Award, GraduationCap, Briefcase, BadgeCheck, ScrollText, Flask, TestTube, Microscope } from 'lucide-react';
 import Header from '../components/Header';
 
 interface InstructorInfo {
@@ -173,6 +173,29 @@ const Cursos = () => {
       priceWithBadge: "R$ 559,99",
       includes: [
         "Diploma de Agente de Investigação",
+        "Credencial funcional",
+        "Material didático completo",
+        "Suporte técnico especializado"
+      ]
+    },
+    {
+      title: "Perito Forense",
+      description: "Um curso de Perícia Forense capacita profissionais a atuar na investigação e análise técnica de crimes, incidentes e disputas judiciais, utilizando métodos científicos para esclarecer fatos e produzir laudos periciais. É uma formação multidisciplinar, com aplicações nas áreas criminal, cível, trabalhista, ambiental, entre outras.",
+      icon: <TestTube size={32} />,
+      curriculum: [
+        "Criminalística: princípios da investigação técnica e científica",
+        "Análise de local de crime: coleta, preservação e interpretação de vestígios",
+        "Papiloscopia: identificação por impressões digitais",
+        "Balística forense: estudo de armas, munições e trajetórias de projéteis",
+        "Documentoscopia e grafoscopia: verificação de documentos e assinaturas",
+        "Perícia ambiental, contábil e digital",
+        "Legislação aplicada à perícia: atuação judicial, elaboração de laudos e ética profissional",
+        "Técnicas laboratoriais e uso de equipamentos periciais"
+      ],
+      price: "R$ 439,99",
+      priceWithBadge: "R$ 639,99",
+      includes: [
+        "Diploma de Perito Forense",
         "Credencial funcional",
         "Material didático completo",
         "Suporte técnico especializado"
