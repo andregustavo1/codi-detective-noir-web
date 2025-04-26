@@ -1,6 +1,7 @@
 import React from 'react';
-import { FileSearch, Shield, Camera, CheckCircle2, DollarSign, Award, GraduationCap, Briefcase, BadgeCheck, ScrollText, Flask, TestTube, Microscope } from 'lucide-react';
+import { FileSearch, Shield, Camera, CheckCircle2, DollarSign, Award, GraduationCap, Briefcase, BadgeCheck, ScrollText, TestTube, Microscope, FileText, Brain } from 'lucide-react';
 import Header from '../components/Header';
+import { Button } from '../components/ui/button';
 
 interface InstructorInfo {
   text: string;
@@ -27,26 +28,26 @@ const CourseCard = ({
   priceWithBadge, 
   includes 
 }: CourseInfo) => (
-  <div className="bg-detective-black/30 backdrop-blur-sm p-8 rounded-lg border border-white/10 hover:border-detective-red/50 transition-all">
+  <div className="bg-[#111] p-8 rounded-xl border border-gray-800 hover:border-detective-red/50 transition-all shadow-xl">
     <div className="flex items-center gap-3 mb-6">
       <div className="text-detective-red">{icon}</div>
-      <h3 className="text-2xl font-special-elite">{title}</h3>
+      <h3 className="text-2xl font-montserrat font-bold">{title}</h3>
     </div>
     
     <div className="space-y-6">
       <div>
-        <p className="text-gray-300 leading-relaxed">{description}</p>
+        <p className="text-gray-400 leading-relaxed">{description}</p>
       </div>
 
       {instructors && instructors.length > 0 && (
         <div className="space-y-3">
-          <h4 className="font-special-elite text-lg flex items-center gap-2">
+          <h4 className="text-lg font-montserrat font-semibold flex items-center gap-2">
             <GraduationCap className="text-detective-red" />
             Dos Instrutores:
           </h4>
           <ul className="list-none space-y-2">
             {instructors.map((instructor, index) => (
-              <li key={index} className="text-gray-300 flex items-start gap-2">
+              <li key={index} className="text-gray-400 flex items-start gap-2">
                 <CheckCircle2 className="w-5 h-5 text-detective-red shrink-0 mt-1" />
                 <span>{instructor.text}</span>
               </li>
@@ -57,13 +58,13 @@ const CourseCard = ({
 
       {curriculum && curriculum.length > 0 && (
         <div className="space-y-3">
-          <h4 className="font-special-elite text-lg flex items-center gap-2">
+          <h4 className="text-lg font-montserrat font-semibold flex items-center gap-2">
             <Award className="text-detective-red" />
             Conteúdo Programático:
           </h4>
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
+          <ul className="grid grid-cols-1 gap-2">
             {curriculum.map((item, index) => (
-              <li key={index} className="text-gray-300 flex items-start gap-2">
+              <li key={index} className="text-gray-400 flex items-start gap-2">
                 <CheckCircle2 className="w-5 h-5 text-detective-red shrink-0 mt-1" />
                 <span>{item}</span>
               </li>
@@ -73,13 +74,13 @@ const CourseCard = ({
       )}
 
       <div className="space-y-3">
-        <h4 className="font-special-elite text-lg flex items-center gap-2">
+        <h4 className="text-lg font-montserrat font-semibold flex items-center gap-2">
           <ScrollText className="text-detective-red" />
           O que está incluso:
         </h4>
         <ul className="list-none space-y-2">
           {includes.map((item, index) => (
-            <li key={index} className="text-gray-300 flex items-start gap-2">
+            <li key={index} className="text-gray-400 flex items-start gap-2">
               <CheckCircle2 className="w-5 h-5 text-detective-red shrink-0 mt-1" />
               <span>{item}</span>
             </li>
@@ -87,17 +88,20 @@ const CourseCard = ({
         </ul>
       </div>
 
-      <div className="pt-6 border-t border-white/10">
-        <div className="flex items-center gap-2">
-          <DollarSign className="text-detective-red" />
-          <span className="text-2xl font-special-elite text-detective-red">{price}</span>
+      <div className="pt-6 space-y-4 border-t border-gray-800">
+        <div className="space-y-2">
+          <Button variant="default" className="w-full bg-detective-red hover:bg-detective-red/90 text-white font-montserrat">
+            <DollarSign className="w-5 h-5" />
+            Comprar por {price}
+          </Button>
+          
+          {priceWithBadge && (
+            <Button variant="outline" className="w-full border-detective-red text-detective-red hover:bg-detective-red/10 font-montserrat">
+              <BadgeCheck className="w-5 h-5" />
+              Comprar com Distintivo por {priceWithBadge}
+            </Button>
+          )}
         </div>
-        {priceWithBadge && (
-          <div className="mt-2 text-sm text-gray-400 flex items-center gap-2">
-            <BadgeCheck className="w-4 h-4" />
-            Com distintivo: {priceWithBadge}
-          </div>
-        )}
       </div>
     </div>
   </div>
@@ -200,6 +204,68 @@ const Cursos = () => {
         "Material didático completo",
         "Suporte técnico especializado"
       ]
+    },
+    {
+      title: "Perícia Grafotécnica",
+      description: "Um curso de Perícia Grafotécnica capacita profissionais para identificar a autenticidade de assinaturas e manuscritos, detectando fraudes, falsificações e adulterações em documentos. O perito grafotécnico atua principalmente em processos judiciais e administrativos, como assistente técnico ou perito judicial.",
+      icon: <FileText size={32} />,
+      curriculum: [
+        "Fundamentos da grafoscopia: princípios da escrita manual e variações gráficas",
+        "Identificação de assinaturas autênticas e falsas",
+        "Técnicas de comparação grafotécnica",
+        "Elementos gráficos analisáveis",
+        "Exames em documentos suspeitos",
+        "Elaboração de laudos periciais grafotécnicos",
+        "Atuação judicial",
+        "Legislação e ética profissional"
+      ],
+      price: "R$ 399,99",
+      priceWithBadge: "R$ 599,99",
+      includes: [
+        "Diploma",
+        "Funcional"
+      ]
+    },
+    {
+      title: "Inteligência Forense",
+      description: "Um curso de Inteligência Forense é voltado para formar profissionais capazes de aplicar técnicas de investigação, análise e interpretação de dados no contexto forense — ou seja, voltado para a resolução de crimes e apoio a processos judiciais. O foco está em cruzar informações, identificar padrões e produzir relatórios estratégicos para auxiliar investigações criminais e ações legais.",
+      icon: <Brain size={32} />,
+      curriculum: [
+        "Fundamentos de inteligência",
+        "Criminalística e ciências forenses",
+        "Inteligência criminal",
+        "Análise de dados forenses",
+        "Contrainteligência",
+        "Técnicas de investigação e monitoramento",
+        "Aspectos legales e éticos da atividade de inteligência"
+      ],
+      price: "R$ 439,99",
+      priceWithBadge: "R$ 639,99",
+      includes: [
+        "Diploma",
+        "Funcional"
+      ]
+    },
+    {
+      title: "Perito Criminal",
+      description: "Um curso de Perito Criminal Particular forma profissionais capacitados a atuar de forma independente na análise de cenas de crime, documentos, objetos e evidências, produzindo laudos técnicos que podem ser usados em processos judiciais ou extrajudiciais. Ao contrário dos peritos oficiais (concursados), o perito particular pode ser contratado por advogados, empresas ou partes envolvidas em litígios.",
+      icon: <Microscope size={32} />,
+      curriculum: [
+        "Criminalística: fundamentos da investigação científica de crimes",
+        "Papiloscopia e balística",
+        "Local de crime: preservação, coleta e interpretação de vestígios",
+        "Documentoscopia",
+        "Perícia em locais de acidente ou incêndio",
+        "Perícia digital",
+        "Legislação e atuação judicial",
+        "Ética profissional e sigilo técnico"
+      ],
+      price: "R$ 999,99",
+      priceWithBadge: "R$ 1.199,99",
+      includes: [
+        "Diploma",
+        "Funcional"
+      ]
     }
   ];
 
@@ -208,7 +274,7 @@ const Cursos = () => {
       <Header />
       <div className="pt-32 pb-20">
         <div className="detective-container">
-          <h1 className="text-4xl md:text-5xl font-special-elite text-center mb-16 text-white">
+          <h1 className="text-4xl md:text-5xl font-montserrat font-bold text-center mb-16 text-white">
             Nossos Cursos
           </h1>
           
