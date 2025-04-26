@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { FileSearch, Shield, Camera, CheckCircle2, DollarSign, Award, GraduationCap, Briefcase, BadgeCheck, ScrollText, TestTube, Microscope, FileText, Brain } from 'lucide-react';
 import Header from '../components/Header';
@@ -28,26 +29,24 @@ const CourseCard = ({
   priceWithBadge, 
   includes 
 }: CourseInfo) => (
-  <div className="bg-[#111] p-8 rounded-xl border border-gray-800 hover:border-detective-red/50 transition-all shadow-xl">
-    <div className="flex items-center gap-3 mb-6">
-      <div className="text-detective-red">{icon}</div>
-      <h3 className="text-2xl font-montserrat font-bold">{title}</h3>
+  <div className="bg-[#1A1A1A] p-12 rounded-xl border border-gray-800 hover:border-detective-red/50 transition-all shadow-xl bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48cmVjdCB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIGZpbGw9IiMxQTFBMUEiLz48cGF0aCBkPSJNMCAwaDQwdjQwSDB6IiBmaWxsPSIjMjIyIiBmaWxsLW9wYWNpdHk9IjAuMSIvPjwvc3ZnPg==')] space-y-8">
+    <div className="flex items-center gap-4">
+      <div className="text-detective-red p-2 bg-detective-red/10 rounded-lg">{icon}</div>
+      <h3 className="text-3xl font-montserrat font-extrabold">{title}</h3>
     </div>
     
-    <div className="space-y-6">
-      <div>
-        <p className="text-gray-400 leading-relaxed">{description}</p>
-      </div>
+    <div className="space-y-8">
+      <p className="text-gray-400 leading-relaxed text-lg">{description}</p>
 
       {instructors && instructors.length > 0 && (
-        <div className="space-y-3">
-          <h4 className="text-lg font-montserrat font-semibold flex items-center gap-2">
+        <div className="space-y-4">
+          <h4 className="text-xl font-montserrat font-semibold flex items-center gap-2 text-gray-300">
             <GraduationCap className="text-detective-red" />
             Dos Instrutores:
           </h4>
-          <ul className="list-none space-y-2">
+          <ul className="list-none space-y-3">
             {instructors.map((instructor, index) => (
-              <li key={index} className="text-gray-400 flex items-start gap-2">
+              <li key={index} className="text-gray-400 flex items-start gap-2 leading-relaxed text-base">
                 <CheckCircle2 className="w-5 h-5 text-detective-red shrink-0 mt-1" />
                 <span>{instructor.text}</span>
               </li>
@@ -57,14 +56,14 @@ const CourseCard = ({
       )}
 
       {curriculum && curriculum.length > 0 && (
-        <div className="space-y-3">
-          <h4 className="text-lg font-montserrat font-semibold flex items-center gap-2">
+        <div className="space-y-4">
+          <h4 className="text-xl font-montserrat font-semibold flex items-center gap-2 text-gray-300">
             <Award className="text-detective-red" />
             Conteúdo Programático:
           </h4>
-          <ul className="grid grid-cols-1 gap-2">
+          <ul className="grid grid-cols-1 gap-3">
             {curriculum.map((item, index) => (
-              <li key={index} className="text-gray-400 flex items-start gap-2">
+              <li key={index} className="text-gray-400 flex items-start gap-2 leading-relaxed text-base">
                 <CheckCircle2 className="w-5 h-5 text-detective-red shrink-0 mt-1" />
                 <span>{item}</span>
               </li>
@@ -73,14 +72,14 @@ const CourseCard = ({
         </div>
       )}
 
-      <div className="space-y-3">
-        <h4 className="text-lg font-montserrat font-semibold flex items-center gap-2">
+      <div className="space-y-4">
+        <h4 className="text-xl font-montserrat font-semibold flex items-center gap-2 text-gray-300">
           <ScrollText className="text-detective-red" />
           O que está incluso:
         </h4>
-        <ul className="list-none space-y-2">
+        <ul className="list-none space-y-3">
           {includes.map((item, index) => (
-            <li key={index} className="text-gray-400 flex items-start gap-2">
+            <li key={index} className="text-gray-400 flex items-start gap-2 leading-relaxed text-base">
               <CheckCircle2 className="w-5 h-5 text-detective-red shrink-0 mt-1" />
               <span>{item}</span>
             </li>
@@ -88,15 +87,21 @@ const CourseCard = ({
         </ul>
       </div>
 
-      <div className="pt-6 space-y-4 border-t border-gray-800">
-        <div className="space-y-2">
-          <Button variant="default" className="w-full bg-detective-red hover:bg-detective-red/90 text-white font-montserrat">
+      <div className="pt-8 space-y-4 border-t border-gray-800">
+        <div className="space-y-3">
+          <Button 
+            variant="outline" 
+            className="w-full group border-detective-red text-detective-red hover:bg-detective-red hover:text-white transition-all duration-300 font-montserrat text-lg py-6"
+          >
             <DollarSign className="w-5 h-5" />
             Comprar por {price}
           </Button>
           
           {priceWithBadge && (
-            <Button variant="outline" className="w-full border-detective-red text-detective-red hover:bg-detective-red/10 font-montserrat">
+            <Button 
+              variant="default" 
+              className="w-full group bg-detective-red hover:bg-detective-red/90 text-white transition-all duration-300 font-montserrat text-lg py-6"
+            >
               <BadgeCheck className="w-5 h-5" />
               Comprar com Distintivo por {priceWithBadge}
             </Button>
