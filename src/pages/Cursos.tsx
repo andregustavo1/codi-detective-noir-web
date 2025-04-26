@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { FileSearch, Shield, Camera, CheckCircle2, DollarSign, Certificate, Award, GraduationCap, Briefcase } from 'lucide-react';
+import { FileSearch, Shield, Camera, CheckCircle2, DollarSign, Award, GraduationCap, Briefcase, BadgeCheck, ScrollText } from 'lucide-react';
 import Header from '../components/Header';
 
 interface InstructorInfo {
@@ -75,7 +74,7 @@ const CourseCard = ({
 
       <div className="space-y-3">
         <h4 className="font-special-elite text-lg flex items-center gap-2">
-          <Certificate className="text-detective-red" />
+          <ScrollText className="text-detective-red" />
           O que está incluso:
         </h4>
         <ul className="list-none space-y-2">
@@ -95,7 +94,7 @@ const CourseCard = ({
         </div>
         {priceWithBadge && (
           <div className="mt-2 text-sm text-gray-400 flex items-center gap-2">
-            <Badge className="w-4 h-4" />
+            <BadgeCheck className="w-4 h-4" />
             Com distintivo: {priceWithBadge}
           </div>
         )}
