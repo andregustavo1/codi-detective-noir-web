@@ -91,27 +91,4 @@
     letter-spacing: 0.15em;
     animation: typewriter 3.5s steps(40, end), blink 0.75s step-end infinite;
   }
-
-  .geometric-pattern-bg {
-    background-image: url('/lovable-uploads/9748e761-ad0a-4e65-9306-2542f6c70157.png');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-  }
-
-  .geometric-pattern-bg::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to bottom, rgba(13, 13, 13, 0.85), rgba(13, 13, 13, 0.95));
-    z-index: 1;
-  }
-
-  .geometric-pattern-bg > * {
-    position: relative;
-    z-index: 2;
-  }
 }
