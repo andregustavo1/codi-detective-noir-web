@@ -74,7 +74,7 @@ const CourseCard = ({
 
       <div className="pt-8 space-y-4 border-t border-gray-800">
         <div className="space-y-3">
-          <Button variant="outline" className="w-full group border-detective-red text-accent-foreground hover:text-detective-red  bg-detective-red/10 hover:bg-detective-red hover:text-white transition-all duration-300 font-montserrat text-lg py-6\n\n">
+          <Button variant="outline" className="w-full group border-detective-red text-accent-foreground hover:text-detective-red  bg-detective-red/10 hover:text-white transition-all duration-300 font-montserrat text-lg py-6\\n\\n">
             <DollarSign className="w-5 h-5" />
             Comprar por {price}
           </Button>
