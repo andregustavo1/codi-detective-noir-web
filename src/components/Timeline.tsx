@@ -40,7 +40,7 @@ const Timeline = () => {
   ];
 
   return (
-    <section className="py-20 bg-detective-darkgray">
+    <section className="py-20 bg-detective-darkgray geometric-pattern-bg">
       <div className="detective-container">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-montserrat font-bold text-white mb-6 leading-tight tracking-wide">
