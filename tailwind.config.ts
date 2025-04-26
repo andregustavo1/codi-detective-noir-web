@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -135,7 +134,6 @@ export default {
 				'dark-paper': "url('https://images.unsplash.com/photo-1593005510329-8a4035a7238f?q=80&w=1920')"
 			},
 			fontFamily: {
-				'special-elite': ['"Special Elite"', 'cursive'],
 				'courier-prime': ['"Courier Prime"', 'monospace'],
 				'montserrat': ['Montserrat', 'sans-serif']
 			}
