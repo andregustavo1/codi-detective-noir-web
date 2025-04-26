@@ -1,6 +1,6 @@
-
 import React, { useEffect, useState } from 'react';
 import { Fingerprint } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -53,15 +53,15 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
-              <a href="#inscreva-se" className="detective-button group">
+              <Link to="/cursos" className="detective-button group">
                 <span className="flex items-center">
                   Quero Ser Detetive
                   <Fingerprint className="ml-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
                 </span>
-              </a>
-              <a href="#sobre-o-curso" className="text-white underline hover:text-detective-red transition-colors">
+              </Link>
+              <Link to="/cursos" className="text-white underline hover:text-detective-red transition-colors">
                 Saiba mais sobre o curso
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -91,4 +91,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
