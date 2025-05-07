@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { Fingerprint } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -32,7 +33,7 @@ const Hero = () => {
               <img src="/lovable-uploads/1bd30a81-d2c0-4644-9faa-cfcd8b8240a9.png" alt="CODI Brasil Logo" className="w-full h-full object-contain" />
             </div>
             
-            <h1 className="text-4xl md:text-6xl font-special-elite text-white mb-6 leading-tight tracking-wide md:w-full">Torne-se um perito ou investigador profissional</h1>
+            <h1 className="text-4xl md:text-6xl font-montserrat text-white mb-6 leading-tight tracking-wide md:w-full">Torne-se um perito ou investigador profissional</h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed font-courier-prime">
               Curso completo com metodologia exclusiva e<br />
@@ -42,7 +43,7 @@ const Hero = () => {
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
               <Link to="/cursos" className="detective-button group">
                 <span className="flex items-center">
-                  Quero Ser Detetive
+                  Cursos codi brasil
                   <Fingerprint className="ml-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
                 </span>
               </Link>
