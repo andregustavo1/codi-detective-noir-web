@@ -92,8 +92,8 @@ const CourseCard = ({
       <div className="pt-8 space-y-4 border-t border-gray-800">
         <div className="space-y-3">
           <a href={checkoutLink} target="_blank" rel="noopener noreferrer">
-            <Button variant="default" className="w-full group bg-detective-red hover:bg-detective-red/90 text-white transition-all duration-300 font-montserrat text-lg py-6">
-              <DollarSign className="w-5 h-5" />
+            <Button variant="default" className="w-full group bg-detective-red hover:bg-detective-red/90 text-white transition-all duration-300 font-montserrat text-lg py-7 px-6">
+              <DollarSign className="w-6 h-6" />
               Matricule-se agora
             </Button>
           </a>
